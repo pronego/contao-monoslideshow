@@ -1,0 +1,48 @@
+{
+    "name": "pronego/contao-monoslideshow",
+    "type": "contao-bundle",
+    "description": "Die ultimativ konfigurierbare HTML5 Bilder- und Video-Slideshow.",
+    "license": "LGPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "Dr. Manuel Lamotte-Schubert",
+            "homepage": "https://www.pronego.com"
+        },
+        {
+            "name": "PRONEGO",
+            "homepage": "https://www.pronego.com"
+        },
+        {
+            "name": "Daniel Ritter",
+            "homepage": "https://www.designr.ch"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "contao/core-bundle": "^5.2"
+    },
+    "require-dev": {
+        "contao/manager-plugin": "^2.0"
+    },
+    "conflict": {
+        "contao/core": "*",
+        "contao/manager-plugin": "<2.0 || >=3.0"
+    },
+    "extra": {
+        "contao-manager-plugin": "pronego\\MonoslideshowBundle\\ContaoManager\\Plugin"
+    },
+    "autoload": {
+        "psr-4": {
+            "pronego\\MonoslideshowBundle\\": "src/"
+        },
+        "classmap": [
+            "contao/"
+        ],
+        "exclude-from-classmap": [
+            "contao/config/",
+            "contao/dca/",
+            "contao/languages/",
+            "contao/templates/"
+        ]
+    }
+}

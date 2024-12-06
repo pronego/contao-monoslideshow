@@ -1,0 +1,23 @@
+Monoslideshow Single User License Agreement
+
+The following is a legal agreement between you and Monokai. When you purchase and download Monoslideshow, Monokai grants you, the purchaser, a non-exclusive, non-transferable license to use Monoslideshow subject to the restrictions defined below.
+
+1. You may use Monoslideshow in personal and / or commercial projects.
+
+2. You may implement Monoslideshow in an unlimited number of websites, offline presentations and / or other multimedia presentations, as long as you are acting as the administrator and / or developer for those websites and / or presentations.
+
+3. You may implement Monoslideshow as part of hired work for a third party as long as you are acting as the administrator and / or developer for that party.
+
+4. Monoslideshow may not be embedded in a template, desktop software application, content management system, and / or online web service in a manner where Monoslideshow is replicated and / or used as a slideshow viewer for photos / videos and / or other media contributed by more than one party.
+
+5. Monoslideshow may not be sub-licensed, resold, or redistributed in a downloadable format.
+
+6. You may not loan, rent, transfer or grant any rights to Monoslideshow contained herein, or any compilation, derivative or collective work containing Monoslideshow to any other person or organization without the prior written consent of Monokai.
+
+7. Monoslideshow and associated files are provided "as is." You agree to hold Monokai harmless for any damages that may occur due to use, or inability to use, software from Monokai.
+
+8. Monoslideshow is copyrighted by Monokai. No title or intellectual property rights in Monoslideshow are transferred to you. Monokai retains all rights not expressly granted by this license.
+
+9. This license is in full force until it is terminated. If you do not comply with the terms and conditions above, the license automatically terminates.
+
+10. This agreement will be governed by the laws in force in the Netherlands.

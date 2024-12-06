@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Monoslideshow 3 XML file, generated from monoslideshow.com -->
+
+<album>
+
+	<configuration delay="10">
+		<transition type="waterDrop" time="3" easing="none" strength="1" size="0.2" performOutro="true" kenBurnsMode="randomZoomAndPan" kenBurnsStrength="0.5" kenBurnsTime="10" />
+		<caption displayMode="never" position="bottomCenter" textAlign="center" backgroundType="fitCompleteText" backgroundColor="#000" backgroundAlpha="0.9" width="100%%">
+			<transition type="moveIn" />
+			<shadow size="8" />
+			<gloss strength="0.15000000000000002" />
+			<emboss strength="0.10" />
+			<title font="'Arial Black', Gadget, sans-serif">
+				<shadow size="0" angle="85" />
+			</title>
+			<description color="#fff">
+				<shadow size="0" />
+			</description>
+		</caption>
+		<controller type="none">
+			<scrubBar backgroundColor="#555" loadingColor="#fff" progressColor="#ff2d46" />
+		</controller>
+		<sideButtons type="horizontal" position="bottom" backgroundRadius="16" startHidden="true" />
+		<navigation position="bottomCenter" />
+	</configuration>
+
+	<contents>
+
+		<!-- place your content here
+
+		<image source="image1.jpg" />
+		<image source="image2.jpg" />
+		<image source="image3.jpg" />
+
+		-->
+
+	</contents>
+
+</album>

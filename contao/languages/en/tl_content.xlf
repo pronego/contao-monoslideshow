@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.1">
+<file>
+<body>
+    <!-- FIELDS -->
+    <trans-unit id="tl_content.monoslideshowSize.0">
+        <target>Width and height</target>
+    </trans-unit>
+    <trans-unit id="tl_content.monoslideshowSize.1">
+        <target>Please enter the width and height of the gallery.</target>
+    </trans-unit>
+    <trans-unit id="tl_content.monoslideshowBgColor.0">
+        <target>Background color</target>
+    </trans-unit>
+    <trans-unit id="tl_content.monoslideshowBgColor.1">
+        <target>Here you can set a background color. Default: #000000</target>
+    </trans-unit>
+    <trans-unit id="tl_content.monoslideshowTemplate.0">
+        <target>Monoslideshow template</target>
+    </trans-unit>
+    <trans-unit id="tl_content.monoslideshowTemplate.1">
+        <target>Here you can select the monoslideshow template.</target>
+    </trans-unit>
+    <trans-unit id="tl_content.monoslideshowShowTitle.0">
+        <target>Show image title</target>
+    </trans-unit>
+    <trans-unit id="tl_content.monoslideshowShowTitle.1">
+        <target>Here you can specify whether the title of the image will be displayed in the slideshow.</target>
+    </trans-unit>
+    <trans-unit id="tl_content.monoslideshowShowDescription.0">
+        <target>Show image description</target>
+    </trans-unit>
+    <trans-unit id="tl_content.monoslideshowShowDescription.1">
+        <target>Here you can specify whether the description of the image should be displayed in the slideshow.</target>
+    </trans-unit>
+    <trans-unit id="tl_content.monoslideshowShowLogo.0">
+        <target>Show Monoslideshow logo</target>
+    </trans-unit>
+    <trans-unit id="tl_content.monoslideshowShowLogo.1">
+        <target>Usefull, if it takes too much time to load the slideshow.</target>
+    </trans-unit>
+</body>
+</file>
+</xliff>

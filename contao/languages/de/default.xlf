@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.1">
+<file>
+<body>
+    <!-- CONTENT ELEMENTS -->
+    <trans-unit id="CTE.monoslideshow.0">
+        <target>Monoslideshow</target>
+    </trans-unit>
+    <trans-unit id="CTE.monoslideshow.1">
+        <target>Erzeugt eine Monoslideshow-Bildergalerie.</target>
+    </trans-unit>
+</body>
+</file>
+</xliff>

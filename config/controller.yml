@@ -1,0 +1,16 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+
+    pronego\MonoslideshowBundle\Controller\ContentElement\MonoslideshowController:
+        arguments:
+            - '%kernel.project_dir%'
+            - '@contao.insert_tag.parser'
+            - '@contao.translation.translator'
+
+    pronego\MonoslideshowBundle\Controller\FrontendModule\MonoslideshowController:
+        arguments:
+            - '%kernel.project_dir%'
+            - '@contao.insert_tag.parser'
+            - '@contao.translation.translator'
