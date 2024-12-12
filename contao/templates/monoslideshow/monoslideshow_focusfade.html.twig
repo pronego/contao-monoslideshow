@@ -1,0 +1,55 @@
+<album {% if singleAlbum %} itemPath="{{ path|raw }}" thumbnailPath="{{ path|raw }}"{% endif %}>
+
+	<configuration delay="10" scaleMode="downscaleToFit" backgroundColor="transparent">
+		<transition type="focusFade" time="5" easing="easeInOut" strength="1" size="1" />
+		<caption displayMode="never">
+			<title type="none" />
+		</caption>
+		<controller startHidden="true" disappearMode="fade" iconSize="20" iconSpacing="20" showFullScreenButton="true" showNavigationButton="true" showPreviousButton="true" showPlayButton="true" showNextButton="true" autoPlay="false" />
+		<navigation>
+			<items rows="5" columns="10">
+				<caption margin="4,0,0,4" />
+			</items>
+			<albums>
+				<caption margin="8,0,0,8" />
+			</albums>
+		</navigation>
+	</configuration>
+
+    <contents>
+        {% if singleAlbum %}
+            {% for arrAlbums in albums %}
+                {% for arrAlbum in arrAlbums %}
+                    {% if arrAlbum.0.tag == 'image' %}
+                        <image source="{{ arrAlbum.0.name|raw }}" thumbnail="{{ arrAlbum.0.name|raw }}"{% if arrAlbum.0.link %} link="{{ arrAlbum.0.link|raw }}"{% endif %}{% if showTitle %} title="{{ arrAlbum.0.title }}"{% endif %}{% if showDescription %} description="{{ arrAlbum.0.description }}"{% endif %} />
+                    {% elseif arrAlbum.0.tag == 'video' %}
+                        <video poster="{{ arrAlbum.0.name|raw }}">
+                            <sources>
+                                <variant type="video/{{ arrAlbum.0.type|raw }}" source="{{ arrAlbum.0.name|raw }}" />
+                            </sources>
+                        </video>
+                    {% endif %}
+                {% endfor %}
+            {% endfor %}
+        {% else %}
+            {% for arrAlbums in albums %}
+                <album itemPath="{{ arrAlbums[0].0.path|raw }}" thumbnailPath="{{ arrAlbums[0].0.path|raw }}" thumbnail="{{ arrAlbums[0].0.name|raw }}">
+                    <contents>
+                        {% for arrAlbum in arrAlbums %}
+                            {% if arrAlbum.0.tag == 'image' %}
+                                <image source="{{ arrAlbum.0.name|raw }}" thumbnail="{{ arrAlbum.0.name|raw }}"{% if arrAlbum.0.link %} link="{{ arrAlbum.0.link|raw }}"{% endif %}{% if showTitle %} title="{{ arrAlbum.0.title }}"{% endif %}{% if showDescription %} description="{{ arrAlbum.0.description }}"{% endif %} />
+                            {% elseif arrAlbum.0.tag == 'video' %}
+                                <video poster="{{ arrAlbum.0.name|raw }}">
+                                    <sources>
+                                        <variant type="video/{{ arrAlbum.0.type|raw }}" source="{{ arrAlbum.0.name|raw }}" />
+                                    </sources>
+                                </video>
+                            {% endif %}
+                        {% endfor %}
+                    </contents>
+                </album>
+            {% endfor %}
+        {% endif %}
+    </contents>
+
+</album>

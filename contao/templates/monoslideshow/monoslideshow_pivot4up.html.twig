@@ -1,0 +1,55 @@
+<album {% if singleAlbum %} itemPath="{{ path|raw }}" thumbnailPath="{{ path|raw }}"{% endif %}>
+
+	<configuration backgroundColor="#fff" groupItemsMin="4" groupItemsMax="4" groupGridHorizontalSpacing="10" groupGridVerticalSpacing="10">
+        <transition type="pivot" time="1" strength="0.75" performOutro="true" kenBurnsMode="zoomOut" kenBurnsStrength="0.25" />
+        <controller type="none">
+            <scrubBar backgroundColor="#555" loadingColor="#fff" progressColor="#ff2d46" />
+        </controller>
+        <sideButtons type="horizontal" backgroundColor="#000" backgroundAlpha="0.75" backgroundRadius="100" strokeWidth="2" strokeColor="#fff" strokeAlpha="0.92" padding="20" margin="40" autoHide="false" />
+        <navigation>
+            <items>
+                <caption margin="4,0,0,4" />
+            </items>
+            <albums>
+                <caption margin="8,0,0,8" />
+            </albums>
+        </navigation>
+    </configuration>
+
+    <contents>
+        {% if singleAlbum %}
+            {% for arrAlbums in albums %}
+                {% for arrAlbum in arrAlbums %}
+                    {% if arrAlbum.0.tag == 'image' %}
+                        <image source="{{ arrAlbum.0.name|raw }}" thumbnail="{{ arrAlbum.0.name|raw }}"{% if arrAlbum.0.link %} link="{{ arrAlbum.0.link|raw }}"{% endif %}{% if showTitle %} title="{{ arrAlbum.0.title }}"{% endif %}{% if showDescription %} description="{{ arrAlbum.0.description }}"{% endif %} />
+                    {% elseif arrAlbum.0.tag == 'video' %}
+                        <video poster="{{ arrAlbum.0.name|raw }}">
+                            <sources>
+                                <variant type="video/{{ arrAlbum.0.type|raw }}" source="{{ arrAlbum.0.name|raw }}" />
+                            </sources>
+                        </video>
+                    {% endif %}
+                {% endfor %}
+            {% endfor %}
+        {% else %}
+            {% for arrAlbums in albums %}
+                <album itemPath="{{ arrAlbums[0].0.path|raw }}" thumbnailPath="{{ arrAlbums[0].0.path|raw }}" thumbnail="{{ arrAlbums[0].0.name|raw }}">
+                    <contents>
+                        {% for arrAlbum in arrAlbums %}
+                            {% if arrAlbum.0.tag == 'image' %}
+                                <image source="{{ arrAlbum.0.name|raw }}" thumbnail="{{ arrAlbum.0.name|raw }}"{% if arrAlbum.0.link %} link="{{ arrAlbum.0.link|raw }}"{% endif %}{% if showTitle %} title="{{ arrAlbum.0.title }}"{% endif %}{% if showDescription %} description="{{ arrAlbum.0.description }}"{% endif %} />
+                            {% elseif arrAlbum.0.tag == 'video' %}
+                                <video poster="{{ arrAlbum.0.name|raw }}">
+                                    <sources>
+                                        <variant type="video/{{ arrAlbum.0.type|raw }}" source="{{ arrAlbum.0.name|raw }}" />
+                                    </sources>
+                                </video>
+                            {% endif %}
+                        {% endfor %}
+                    </contents>
+                </album>
+            {% endfor %}
+        {% endif %}
+    </contents>
+
+</album>
