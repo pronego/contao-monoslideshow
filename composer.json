@@ -1,7 +1,7 @@
 {
     "name": "pronego/contao-monoslideshow",
     "type": "contao-bundle",
-    "description": "Die ultimativ konfigurierbare HTML5 Bilder- und Video-Slideshow.",
+    "description": "Die konfigurierbare HTML5 Bilder- und Video-Slideshow.",
     "license": "LGPL-3.0-or-later",
     "authors": [
         {
